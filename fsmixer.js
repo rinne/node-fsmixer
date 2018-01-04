@@ -26,7 +26,6 @@ var Fsmixer = function(key, setSize) {
 	}
 	this.setMax = this.setIsBig ? bbc.bigNumToBitBuf(this.setSize.sub(1)) : BitBuf.from(this.setSize - 1);
     this.c = new Abes(key, this.setMax.length);
-	console.log(this);
 };
 
 function transform(fsmixer, data, encrypt) {
