@@ -1,0 +1,35 @@
+{
+	"name": "fsmixer",
+	"version": "0.1.0",
+	"description": "Finite set encryption library.",
+	"main": "fsmixer.js",
+    "dependencies": {
+        "bitbuf": "^0.1.2",
+        "abes": "^0.1.0"
+	},
+	"scripts": {
+		"test": "node ./test/fsmixer-test.js"
+	},
+	"engines": {
+		"node": ">=4.2.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rinne/node-fsmixer.git"
+	},
+	"keywords": [
+		"encryption",
+		"cipher",
+		"finite set"
+	],
+	"author": {
+		"name": "Timo J. Rinne",
+		"email": "tri@iki.fi",
+		"url": "https://github.com/rinne/"
+	},
+	"license": "GPL-2.0",
+	"bugs": {
+		"url": "https://github.com/rinne/node-fsmixer/issues"
+	},
+	"homepage": "https://github.com/rinne/node-fsmixer#readme"
+}
