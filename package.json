@@ -1,11 +1,13 @@
 {
 	"name": "fsmixer",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Finite set encryption library.",
 	"main": "fsmixer.js",
     "dependencies": {
         "bitbuf": "^0.1.2",
-        "abes": "^0.1.0"
+        "abes": "^0.1.0",
+		"keeptime": "^1.4.0",
+		"bignum": "^0.12.5"
 	},
 	"scripts": {
 		"test": "node ./test/fsmixer-test.js"

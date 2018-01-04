@@ -8,10 +8,6 @@ mapping a range of integers (e.g. 0..10000000) to the same range but
 in pseudorandom order. The mapping is keyed and cryptographically
 strong, so with a different key, the mapping is also different.
 
-Currently it encrypts only input data that conforms with
-Number.isSafeInteger(data), but this restriction will be lifted in
-future.
-
 
 Reference
 =========
@@ -45,6 +41,26 @@ for (var i = 0; i < m; i++) {
 ```
 
 Just figure it out.
+
+
+About Data Types
+================
+
+The data set size is passed to the constructor as number, which must
+pass the check with Number.isSafeInteger() and be greater or equal to
+two, or as a string representing a decimal integer greater or equal to
+two, or BigBum object again greater or equal to two.
+
+If the data set size is greater than what can pass the check with
+Number.isSafeInteger() (i.e. 2^53-1), it must always be passed as a
+string or BigNum.
+
+Encrypt and decrypt methods return an integer. If the sata set size is
+smaller or equal than 2^53-1, it is returned as a number. If however
+the data set size is greater than 2^53-1, both methods, encrypt and
+decrypt, always return a BigNum instead of a number. This solely
+depends on the actual size of the data set, not the type of the
+variable with which it was passed to the constructor.
 
 
 References
