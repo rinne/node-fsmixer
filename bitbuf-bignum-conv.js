@@ -3,16 +3,12 @@
 const BitBuf = require('bitbuf');
 const BigNum = require('bignum');
 
-function offset(pos) {
-    return [ pos >> 3, (7 - (pos & 7)) ];
-}
-
 function bitBufToBigNum(bb) {
     var i, o, r, b;
 	if (bb.length == 0) {
 		return BigNum(0);
 	}
-    o = offset(bb.length - 1);
+    o = BitBuf.bitOffset(bb.length - 1);
 	b = bb.buffer();
     r = BigNum(0);
     for (i = 0; i < o[0]; i++) {
